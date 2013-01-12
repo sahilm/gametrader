@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: c1d722558ee2bd373ca4768c48b8ae944e1bdb05
+  revision: 6581d798e830a7820dd54fe95d40014c0e2057fe
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -73,20 +73,14 @@ GIT
       activesupport (>= 3.0)
       sprockets (~> 2.8)
 
-GIT
-  remote: git://github.com/sahilm/spork-rails.git
-  revision: 8b49e3d6ea85b2f1d23eb3fb148b7e971eb4e614
-  branch: rails-4
-  specs:
-    spork-rails (3.2.1)
-      spork (>= 1.0rc0)
-
 GEM
   remote: https://rubygems.org/
   specs:
     activerecord-deprecated_finders (0.0.1)
     addressable (2.3.2)
     atomic (1.0.1)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -97,70 +91,73 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
-    coderay (1.0.8)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    daemons (1.1.9)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
     ffi (1.3.1)
-    guard (1.6.1)
-      listen (>= 0.6.0)
-      lumberjack (>= 1.0.2)
-      pry (>= 0.9.10)
-      thor (>= 0.14.6)
-    guard-rspec (2.3.3)
-      guard (>= 1.1)
-      rspec (~> 2.11)
-    guard-spork (1.4.1)
-      childprocess (>= 0.2.3)
-      guard (>= 1.1)
-      spork (>= 0.8.4)
+    hashie (1.2.0)
     hike (1.2.1)
+    httpauth (0.2.0)
     i18n (0.6.1)
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
+    jwt (0.1.5)
+      multi_json (>= 1.0)
     libwebsocket (0.1.7.1)
       addressable
       websocket
-    listen (0.7.2)
-    lumberjack (1.0.2)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    method_source (0.8.1)
     mime-types (1.19)
     minitest (4.4.0)
     multi_json (1.5.0)
+    multipart-post (1.1.5)
     nokogiri (1.5.6)
+    oauth2 (0.8.0)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    pry (0.9.10)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.3.1)
     rack (1.4.3)
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.3)
-    rb-fsevent (0.9.3)
     rdoc (3.12)
       json (~> 1.4)
-    rspec (2.12.0)
-      rspec-core (~> 2.12.0)
-      rspec-expectations (~> 2.12.0)
-      rspec-mocks (~> 2.12.0)
     rspec-core (2.12.2)
     rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.12.1)
-    rspec-rails (2.12.1)
+    rspec-rails (2.12.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -174,13 +171,19 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    slop (3.3.3)
-    spork (1.0.0rc3)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     sprockets (2.8.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    thin (1.5.0)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.16.0)
     thread_safe (0.1.0)
       atomic
@@ -203,17 +206,18 @@ PLATFORMS
 
 DEPENDENCIES
   arel!
+  bootstrap-sass
   capybara
   coffee-rails!
-  guard-rspec
-  guard-spork
+  factory_girl_rails
   jquery-rails
+  omniauth-facebook
   pg
   rails!
-  rb-fsevent
   rspec-rails
   sass-rails!
-  spork-rails!
+  simplecov
   sprockets-rails!
+  thin
   turbolinks
   uglifier (>= 1.0.3)

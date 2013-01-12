@@ -10,6 +10,10 @@ require "sprockets/railtie"
 # Assets should be precompiled for production (so we don't need the gems loaded then)
 Bundler.require(*Rails.groups(assets: %w(development test)))
 
+CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.deep_symbolize_keys!
+
 module Gametrader
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

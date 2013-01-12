@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Gametrader::Application.config.secret_key_base = 'e2da4c070bcaa430ccc8adf4c3dffd216385720779a566df626ef2a357b2efd83852371d928d7222775e8e94ac2600c7bdfc70c7b22dda8d61aced4ede6d342d'
+Gametrader::Application.config.secret_key_base = CONFIG[:rails][:secret_key_base]

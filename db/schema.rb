@@ -11,6 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130112154202) do
+
+  create_table "authorizations", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "authorizations", ["uid", "provider"], name: "index_authorizations_on_uid_and_provider", unique: true
+  add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

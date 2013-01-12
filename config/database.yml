@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: gametrader_development
   pool: 5
-  
+
 test:
   adapter: postgresql
   encoding: unicode

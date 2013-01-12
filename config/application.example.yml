@@ -1,0 +1,7 @@
+facebook:
+  key:''
+  secret:''
+  test_user_email:''
+  test_user_pass:''
+rails:
+  secret_key_base:''
