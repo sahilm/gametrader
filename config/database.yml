@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: gametrader_development
+  pool: 5
+  
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: gametrader_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: gametrader_production
+  pool: 5
