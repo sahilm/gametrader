@@ -10,8 +10,8 @@ describe "Sign in", type: :feature do
         click_link 'Facebook'
       end
       within("#login_form") do
-        fill_in 'email',    with: CONFIG[:facebook][:test_user_email]
-        fill_in 'pass',     with: CONFIG[:facebook][:test_user_pass]
+        fill_in 'email',    with: CONFIG[:facebook][:test_user][:email]
+        fill_in 'pass',     with: CONFIG[:facebook][:test_user][:password]
         # login
         page.find('#u_0_1').click
       end
@@ -22,6 +22,7 @@ describe "Sign in", type: :feature do
       current_path.should == root_path
       page.should_not have_link 'Sign in via'
       page.should have_selector ".avatar"
+      page.should have_content CONFIG[:facebook][:test_user][:first_name]
     end
   end
 end

@@ -59,6 +59,8 @@ describe Authorization do
             user = Authorization.from_omniauth(auth_params).user
           end.to change(User, :count).by(1)
           user.email.should == auth_params['info']['email']
+          user.first_name.should == auth_params['info']['first_name']
+          user.last_name.should == auth_params['info']['last_name']
           user.authorizations.count.should == 1
           user.authorizations.first.should == Authorization.find_by(uid: auth_params['uid'])
         end
@@ -97,8 +99,10 @@ describe Authorization do
       'uid' => '123',
       'info' =>
       {
-        'email' => email || 'foobar@example.org',
-        'image' => 'http://example.com/image'
+        'email'      => email || 'foobar@example.org',
+        'image'      => 'http://example.com/image',
+        'first_name' => 'foo',
+        'last_name'  => 'bar'
       }
     }
   end

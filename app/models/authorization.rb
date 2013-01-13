@@ -14,8 +14,15 @@ class Authorization < ActiveRecord::Base
 
     private
     def create_from_omniauth(auth)
-      user = User.where(email: auth["info"]["email"]).first_or_create
-      user.authorizations.create(auth_params(auth))
+      user_from_omniauth(auth).authorizations.create(auth_params(auth))
+    end
+
+    def user_from_omniauth(auth)
+      info = auth["info"]
+      User.find_by(email: info["email"]) ||
+      User.create(email: info["email"],
+                  first_name: info["first_name"],
+                  last_name: info["last_name"])
     end
 
     def auth_params(auth)

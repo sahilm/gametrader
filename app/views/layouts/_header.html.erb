@@ -9,21 +9,27 @@
       <%= link_to "GameTrader", root_path, class: 'brand' %>
       <div class="nav-collapse collapse">
         <% if signed_in? %>
+          <div class="nav pull-right user">
+            <%= current_user.first_name %>
+          </div>
           <div class="nav pull-right">
             <div class="avatar">
-              <%= image_tag current_auth.image, alt: "You!" %>
+              <%= image_tag current_user.avatar %>
             </div>
           </div>
         <% else %>
         <ul class="nav pull-right">
           <li class="dropdown signin">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Sign in via
-              <b class="caret"></b>
+              Sign in
+              <i class="icon-lock"></i>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <%= link_to "Facebook", "/auth/facebook" %>
+                <%= link_to "/auth/facebook" do %>
+                  <i class="icon-facebook"></i>
+                  <span class="signin">Facebook</span>
+                <% end %>
               </li>
             </ul>
           </li>

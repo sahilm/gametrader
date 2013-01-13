@@ -1,12 +1,21 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+@import 'font-awesome';
 
 // header
-.nav .avatar {
-  max-height: 40px;
-  max-width:  40px;
+.nav {
+  .avatar {
+    max-height: 40px;
+    max-width:  40px;
+  }
+
+  &.user {
+    margin-left: 5px;
+    line-height: 2.5;
+  }
+
+  span.signin {
+    margin-left: 10px;
+  }
 }

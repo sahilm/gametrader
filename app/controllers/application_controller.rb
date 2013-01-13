@@ -5,18 +5,18 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def current_auth
-    @current_auth ||= Authorization.find_by_id(session[:auth_id])
-  end
-
   def signed_in?
-    !!current_auth
+    !!current_user
   end
 
-  helper_method :current_auth, :signed_in?
+  def current_user
+    @current_user ||= User.find_by_id(session[:user_id])
+  end
 
-  def current_auth=(auth)
-    @current_auth = auth
-    session[:auth_id] = auth.id
+  helper_method :signed_in?, :current_user
+
+  def current_user=(user)
+    @current_user = user
+    session[:user_id] = user.id
   end
 end

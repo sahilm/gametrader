@@ -15,6 +15,7 @@ group :assets do
   gem 'sass-rails',      github: 'rails/sass-rails'
   gem 'coffee-rails',    github: 'rails/coffee-rails'
   gem 'bootstrap-sass'
+  gem 'font-awesome-sass-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -23,4 +24,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'simplecov', require: false
+  gem 'spork-rails', github: 'sahilm/spork-rails', branch: 'rails-4'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', require: false
+  gem 'growl'
 end

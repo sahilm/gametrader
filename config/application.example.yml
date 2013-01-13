@@ -1,7 +1,10 @@
 facebook:
-  key:''
-  secret:''
-  test_user_email:''
-  test_user_pass:''
+  key:
+  secret:
+  test_user:
+    email:
+    password:
+    first_name:
+    last_name:
 rails:
-  secret_key_base:''
+  secret_key_base:

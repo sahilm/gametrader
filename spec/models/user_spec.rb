@@ -7,6 +7,12 @@ describe User do
     user.email.should == 'foobar@example.org'
   end
 
+  it "should return the users avatar" do
+    user = FactoryGirl.create(:user)
+    2.times { FactoryGirl.create(:authorization, user: user) }
+    user.avatar.should == Authorization.where(user: user).first.image
+  end
+
   describe "validations" do
     before { @user = FactoryGirl.build(:user) }
     subject { @user }
@@ -29,6 +35,11 @@ describe User do
         @other_user = FactoryGirl.create(:user)
         @user.email = @other_user.email.upcase
       end
+      it { should_not be_valid }
+    end
+
+    describe "with empty first name" do
+      before { @user.first_name = nil}
       it { should_not be_valid }
     end
   end
