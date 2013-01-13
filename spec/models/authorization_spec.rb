@@ -19,10 +19,6 @@ describe Authorization do
       before { @auth.user = nil}
       it { should_not be_valid }
     end
-    describe "with missing image" do
-      before { @auth.image = nil }
-      it { should_not be_valid }
-    end
   end
 
   describe "from omniauth" do

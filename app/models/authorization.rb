@@ -4,7 +4,7 @@ class Authorization < ActiveRecord::Base
   validates  :uid,      presence: true
   validates  :provider, presence: true
   validates  :user,     presence: true
-  validates  :image,    presence: true
+
 
   class << self
     def from_omniauth(auth)
@@ -29,7 +29,7 @@ class Authorization < ActiveRecord::Base
       {
         "uid"      => auth["uid"],
         "provider" => auth["provider"],
-        "image"    => auth["info"]["image"]
+        "image"    => auth["info"]["image"] || auth["info"]["picture"]
       }
     end
   end

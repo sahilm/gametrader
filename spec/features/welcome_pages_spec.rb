@@ -20,6 +20,14 @@ describe "Welcome page", type: :feature do
           page.should have_selector '.icon-facebook-sign'
         end
       end
+
+      it "should have sign in via google link" do
+        within(".navbar .navbar-inner .container") do
+          click_link 'Sign in'
+          page.should have_link 'Google', href: '/auth/google_oauth2'
+          page.should have_selector '.icon-google-plus-sign'
+        end
+      end
     end
   end
 end
