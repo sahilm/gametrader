@@ -5,14 +5,13 @@ body { padding-top: 60px; }
 
 // header
 .nav {
-  .avatar {
-    max-height: 40px;
-    max-width:  40px;
-  }
-
   &.user {
     margin-left: 5px;
     line-height: 3;
+
+    .avatar {
+      max-width: 40px;
+    }
   }
 
   span.signin {
