@@ -28,6 +28,7 @@ group :development, :test do
   gem 'spork-rails', github: 'sahilm/spork-rails', branch: 'rails-4'
   gem 'guard-spork'
   gem 'guard-rspec'
+  gem 'guard-rails'
   gem 'rb-fsevent', require: false
   gem 'growl'
 end

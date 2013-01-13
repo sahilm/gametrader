@@ -1,14 +1,17 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+guard 'rails' do
+  watch('Gemfile')
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
 guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
-  watch('config/application.rb')
-  watch('config/environment.rb')
-  watch('config/environments/test.rb')
-  watch(%r{^config/initializers/.+\.rb$})
   watch('Gemfile')
   watch('Gemfile.lock')
   watch('spec/spec_helper.rb') { :rspec }
+  watch(%r{^(config|lib)/.*})
 end
 
 guard 'rspec', :spec_paths => ["spec/models", "spec/controllers", "spec/helpers", "spec/mailers"] do
