@@ -21,7 +21,7 @@ describe "Sign in", type: :feature do
       end
       current_path.should == root_path
       page.should_not have_link 'Sign in via'
-      page.should have_selector "img.avatar"
+      page.should have_selector ".avatar"
     end
   end
 end

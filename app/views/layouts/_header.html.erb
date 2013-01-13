@@ -10,7 +10,9 @@
       <div class="nav-collapse collapse">
         <% if signed_in? %>
           <div class="nav pull-right">
-            <%= image_tag current_auth.image, alt: "You!", class: "avatar" %>
+            <div class="avatar">
+              <%= image_tag current_auth.image, alt: "You!" %>
+            </div>
           </div>
         <% else %>
         <ul class="nav pull-right">
@@ -20,7 +22,7 @@
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li class="facebook">
+              <li>
                 <%= link_to "Facebook", "/auth/facebook" %>
               </li>
             </ul>

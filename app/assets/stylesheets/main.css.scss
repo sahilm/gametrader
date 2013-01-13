@@ -6,6 +6,7 @@ body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
 // header
-.navbar .dropdown.signin {
-  margin-right: 30px;
+.nav .avatar {
+  max-height: 40px;
+  max-width:  40px;
 }
