@@ -2,4 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+// header
+.navbar .dropdown.signin {
+  margin-right: 30px;
+}

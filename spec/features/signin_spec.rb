@@ -19,6 +19,7 @@ describe "Sign in", type: :feature do
       if page.has_selector?('#u_0_0')
         page.find('#u_0_0').click
       end
+      current_path.should == root_path
       page.should_not have_link 'Sign in via'
       page.should have_selector "img.avatar"
     end

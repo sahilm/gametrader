@@ -8,13 +8,13 @@ gem 'arel',  github: 'rails/arel'
 gem 'pg'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'bootstrap-sass'
 gem 'omniauth-facebook'
 
 group :assets do
   gem 'sprockets-rails', github: 'rails/sprockets-rails'
   gem 'sass-rails',      github: 'rails/sass-rails'
   gem 'coffee-rails',    github: 'rails/coffee-rails'
+  gem 'bootstrap-sass'
   gem 'uglifier', '>= 1.0.3'
 end
 
