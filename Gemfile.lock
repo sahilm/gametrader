@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 94384bdbd6aaf95e57887fa5821018b59ca65037
+  revision: 555cb0afb5a8a8e98fc982edb9e09dfaafd46380
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -180,10 +180,10 @@ GEM
       omniauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    pry (0.9.10)
+    pry (0.9.11.1)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
-      slop (~> 3.3.1)
+      slop (~> 3.4)
     rack (1.4.4)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -217,7 +217,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    slop (3.3.3)
+    slop (3.4.3)
     spork (1.0.0rc3)
     sprockets (2.8.2)
       hike (~> 1.2)
