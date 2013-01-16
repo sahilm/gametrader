@@ -2,16 +2,16 @@ development:
   adapter: postgresql
   encoding: unicode
   database: gametrader_development
-  pool: 5
+  pool: 16
 
 test:
   adapter: postgresql
   encoding: unicode
   database: gametrader_test
-  pool: 5
+  pool: 16
 
 production:
   adapter: postgresql
   encoding: unicode
   database: gametrader_production
-  pool: 5
+  pool: 16

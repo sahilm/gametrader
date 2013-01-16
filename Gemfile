@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'thin'
+gem 'puma'
 gem 'rails', github: 'rails/rails'
 gem 'arel',  github: 'rails/arel'
 gem 'pg'
@@ -24,7 +24,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'simplecov', require: false
   gem 'spork-rails', github: 'sahilm/spork-rails', branch: 'rails-4'
   gem 'guard-spork'
   gem 'guard-rspec'
