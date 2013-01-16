@@ -16,6 +16,6 @@
 *.log
 /tmp
 
-# config
 /config/application.yml
 coverage
+vendor/bundle

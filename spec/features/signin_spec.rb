@@ -48,7 +48,7 @@ describe "Sign in", type: :feature do
         end
       end
     end
-    
+
     it "should let me sign in" do
       assert_signed_in(page, @user)
     end
@@ -59,9 +59,8 @@ describe "Sign in", type: :feature do
   end
 
   private
-  
+
   def assert_signed_in(page, user)
-    current_path.should == root_path
     page.should_not have_link 'Sign in'
     page.should have_selector ".avatar"
     page.should have_content user[:first_name]
@@ -69,7 +68,7 @@ describe "Sign in", type: :feature do
     page.click_link user[:first_name]
     page.should have_link "Sign out"
   end
-  
+
   def assert_signed_out(page, user)
     page.click_link user[:first_name]
     page.click_link 'Sign out'
