@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 555cb0afb5a8a8e98fc982edb9e09dfaafd46380
+  revision: 4095c08729a188e6ebc24f86d60a10bc01053d9b
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -127,7 +127,7 @@ GEM
       thor (>= 0.14.6)
     guard-rails (0.1.1)
       guard (>= 0.2.2)
-    guard-rspec (2.3.3)
+    guard-rspec (2.4.0)
       guard (>= 1.1)
       rspec (~> 2.11)
     guard-spork (1.4.1)
@@ -178,7 +178,7 @@ GEM
       omniauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    pry (0.9.11.1)
+    pry (0.9.11.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
