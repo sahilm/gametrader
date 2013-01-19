@@ -13,6 +13,7 @@ module Signin
     page.click_link user[:first_name]
     page.click_link 'Sign out'
     page.should have_link 'Sign in'
+    page.should have_notice_message("Signed out")
     page.should_not have_link user[:first_name]
     current_path.should == root_path
   end
