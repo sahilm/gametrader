@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130112154202) do
 
-  create_table "authorizations", force: true do |t|
+  create_table "identities", force: true do |t|
     t.string   "provider"
     t.string   "uid"
     t.string   "image"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20130112154202) do
     t.datetime "updated_at"
   end
 
-  add_index "authorizations", ["uid", "provider"], name: "index_authorizations_on_uid_and_provider", unique: true
-  add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id"
+  add_index "identities", ["uid", "provider"], name: "index_identities_on_uid_and_provider", unique: true
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email"

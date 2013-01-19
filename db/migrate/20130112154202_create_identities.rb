@@ -1,6 +1,6 @@
-class CreateAuthorizations < ActiveRecord::Migration
+class CreateIdentities < ActiveRecord::Migration
   def change
-    create_table :authorizations do |t|
+    create_table :identities do |t|
       t.string     :provider
       t.string     :uid
       t.string     :image

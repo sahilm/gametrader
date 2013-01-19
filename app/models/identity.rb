@@ -1,4 +1,4 @@
-class Authorization < ActiveRecord::Base
+class Identity < ActiveRecord::Base
   belongs_to :user
 
   validates  :uid,      presence: true
@@ -13,7 +13,7 @@ class Authorization < ActiveRecord::Base
 
     private
     def create_from_omniauth(auth)
-      User.from_omniauth(auth).authorizations.create(auth_params(auth))
+      User.from_omniauth(auth).identities.create(auth_params(auth))
     end
 
     def auth_params(auth)

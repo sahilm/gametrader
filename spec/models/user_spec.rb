@@ -39,8 +39,8 @@ describe User do
 
   it "should return the users avatar" do
     user = FactoryGirl.create(:user)
-    2.times { FactoryGirl.create(:authorization, user: user) }
-    user.avatar.should == Authorization.where(user: user).first.image
+    2.times { FactoryGirl.create(:identity, user: user) }
+    user.avatar.should == Identity.where(user: user).first.image
   end
 
   describe "from omniauth" do

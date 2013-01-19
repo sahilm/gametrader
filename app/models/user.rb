@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :authorizations
+  has_many :identities
 
   validates :email,
             presence: true,
@@ -19,6 +19,6 @@ class User < ActiveRecord::Base
   end
 
   def avatar
-    authorizations.first.image
+    identities.first.image
   end
 end

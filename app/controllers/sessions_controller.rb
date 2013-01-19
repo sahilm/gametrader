@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    if auth = Authorization.from_omniauth(request.env['omniauth.auth'])
+    if auth = Identity.from_omniauth(request.env['omniauth.auth'])
       self.current_user = auth.user
       flash[:success] = "Welcome, #{auth.user.first_name}!"
     end
