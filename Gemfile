@@ -22,12 +22,15 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'capybara'
   gem 'spork-rails', github: 'sahilm/spork-rails', branch: 'rails-4'
   gem 'guard-spork'
-  gem 'guard-rspec'
   gem 'guard-rails'
   gem 'rb-fsevent', require: false
   gem 'growl'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
 end

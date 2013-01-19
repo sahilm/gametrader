@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 4095c08729a188e6ebc24f86d60a10bc01053d9b
+  revision: f209b176c3a39af11f25e7a77fd856b5ad55c996
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -30,7 +30,7 @@ GIT
       builder (~> 3.1.0)
     activerecord (4.0.0.beta)
       activemodel (= 4.0.0.beta)
-      activerecord-deprecated_finders (= 0.0.1)
+      activerecord-deprecated_finders (= 0.0.2)
       activesupport (= 4.0.0.beta)
       arel (~> 3.0.2)
     activesupport (4.0.0.beta)
@@ -84,7 +84,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activerecord-deprecated_finders (0.0.1)
+    activerecord-deprecated_finders (0.0.2)
     addressable (2.3.2)
     atomic (1.0.1)
     bootstrap-sass (2.2.2.0)
@@ -178,7 +178,7 @@ GEM
       omniauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    pry (0.9.11.2)
+    pry (0.9.11.3)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
