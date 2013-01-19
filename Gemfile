@@ -10,7 +10,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'simple_form'
 gem 'the_games_db', github: 'sahilm/the_games_db'
 
 group :assets do
