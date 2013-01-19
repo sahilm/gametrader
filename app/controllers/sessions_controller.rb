@@ -5,16 +5,16 @@ class SessionsController < ApplicationController
       self.current_user = auth.user
       flash[:success] = "Welcome, #{auth.user.first_name}!"
     end
-    redirect_to root_url
+    redirect_to root_path
   end
 
   def failure
-    flash[:error] = "Unable to sign in. Did you forget to allow us access?"
-    redirect_to root_url
+    flash[:error] = "Unable to sign in. Did you remember to allow us access?"
+    redirect_to root_path
   end
 
   def destroy
     self.current_user = nil
-    redirect_to root_url
+    redirect_to root_path
   end
 end
