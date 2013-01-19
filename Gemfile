@@ -27,12 +27,19 @@ group :development, :test do
   gem 'spork-rails', github: 'sahilm/spork-rails', branch: 'rails-4'
   gem 'guard-spork'
   gem 'guard-rails'
-  gem 'rb-fsevent', require: false
-  gem 'growl',      require: false
 end
 
 group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'guard-rspec'
+end
+
+group :darwin do
+  gem 'rb-fsevent'
+  gem 'growl'
+end
+
+group :linux do
+  gem 'rb-inotify'
 end

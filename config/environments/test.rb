@@ -1,6 +1,7 @@
 Gametrader::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-
+  # Settings specified here will take precedence over those in config/application.rb.  
+  platform = RUBY_PLATFORM.match(/(linux|darwin)/)[0].to_sym
+  Bundler.require(platform)
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped

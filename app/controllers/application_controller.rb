@@ -15,10 +15,6 @@ class ApplicationController < ActionController::Base
 
   def current_user=(user)
     @current_user = user
-    if user
-      session[:user_id] = user.id
-    else
-      session[:user_id] = nil
-    end
+    session[:user_id] = user.nil? ? user : user.id
   end
 end

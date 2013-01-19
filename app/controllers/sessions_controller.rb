@@ -1,9 +1,15 @@
 class SessionsController < ApplicationController
 
   def create
-    if @auth = Authorization.from_omniauth(request.env['omniauth.auth'])
-      self.current_user = @auth.user
+    if auth = Authorization.from_omniauth(request.env['omniauth.auth'])
+      self.current_user = auth.user
+      flash[:success] = "Welcome, #{auth.user.first_name}!"
     end
+    redirect_to root_url
+  end
+
+  def failure
+    flash[:error] = "Unable to sign in. Did you forget to allow us access?"
     redirect_to root_url
   end
 
