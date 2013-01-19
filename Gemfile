@@ -26,7 +26,7 @@ group :development, :test do
   gem 'guard-spork'
   gem 'guard-rails'
   gem 'rb-fsevent', require: false
-  gem 'growl'
+  gem 'growl',      require: false
 end
 
 group :test do

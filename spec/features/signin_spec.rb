@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "Sign in", type: :feature do
-  describe "via Facebook", type: :feature do
+describe "Sign in" do
+  describe "via Facebook" do
     before(:each) do
       @user = CONFIG[:facebook][:test_user]
       visit root_path

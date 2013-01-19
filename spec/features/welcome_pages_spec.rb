@@ -1,9 +1,11 @@
 require 'spec_helper'
 
-describe "Welcome page", type: :feature do
-  before { visit root_path }
+describe "Welcome page" do
+  before(:each) do
+    visit root_path
+  end
 
-  describe "navbar", type: :feature do
+  describe "navbar" do
     describe "for a non-signed in user" do
       it "should have the correct links" do
         within(".navbar .navbar-inner .container") do

@@ -8,21 +8,12 @@ class Authorization < ActiveRecord::Base
 
   class << self
     def from_omniauth(auth)
-      where(auth.slice("uid", "provider")).first ||
-      create_from_omniauth(auth)
+      find_by(auth.slice("uid", "provider")) || create_from_omniauth(auth)
     end
 
     private
     def create_from_omniauth(auth)
-      user_from_omniauth(auth).authorizations.create(auth_params(auth))
-    end
-
-    def user_from_omniauth(auth)
-      info = auth["info"]
-      User.find_by(email: info["email"]) ||
-      User.create(email: info["email"],
-                  first_name: info["first_name"],
-                  last_name: info["last_name"])
+      User.from_omniauth(auth).authorizations.create(auth_params(auth))
     end
 
     def auth_params(auth)
