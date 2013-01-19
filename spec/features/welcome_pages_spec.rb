@@ -33,11 +33,7 @@ describe "Welcome page" do
     end
   end
 
-  describe "hero unit" do
-    it "should have the right content" do
-      within(".hero-unit") do
-        page.should have_content 'GameTrader'
-      end
-    end
+  describe "header" do
+    it "fill in some tests"
   end
 end
