@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       self.current_user = auth.user
       flash[:success] = "Welcome, #{auth.user.first_name}!"
     end
-    redirect_to root_path
+    redirect_to request.env['omniauth.origin'] || root_path
   end
 
   def failure

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130112154202) do
+ActiveRecord::Schema.define(version: 20130119181436) do
+
+  create_table "games", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "games", ["user_id"], name: "index_games_on_user_id"
 
   create_table "identities", force: true do |t|
     t.string   "provider"
@@ -31,6 +40,7 @@ ActiveRecord::Schema.define(version: 20130112154202) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "current_identity_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
