@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 5f412956cf55c48996b67d1a6b0d621504a677ba
+  revision: 1b75b94de6d474d56a6c47e74bdbd985ec14087b
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -66,9 +66,9 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 09917104fdb42245fe369612a7b0e3d77e1ba763
+  revision: 22270f83fb63537cef8a638835363360f2fbaab4
   specs:
-    sprockets-rails (2.0.0.rc1)
+    sprockets-rails (2.0.0.rc2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -105,7 +105,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
-    childprocess (0.3.6)
+    childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
     coderay (1.0.8)
     coffee-script (2.2.0)
@@ -133,7 +133,7 @@ GEM
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-rails (0.1.1)
+    guard-rails (0.2.1)
       guard (>= 0.2.2)
     guard-rspec (2.4.0)
       guard (>= 1.1)
@@ -160,7 +160,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.19)
-    minitest (4.4.0)
+    minitest (4.5.0)
     multi_json (1.5.0)
     multipart-post (1.1.5)
     nokogiri (1.5.6)
