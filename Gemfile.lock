@@ -273,6 +273,7 @@ DEPENDENCIES
   pg
   puma
   rails!
+  rake
   rb-fsevent
   rb-inotify
   rspec-rails

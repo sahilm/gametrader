@@ -1,7 +1,7 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard 'rails', server: :puma do
+guard 'rails', server: :puma, daemon: true do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end
